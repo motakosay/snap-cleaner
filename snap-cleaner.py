@@ -100,7 +100,7 @@ def main():
     if not im:
         sys.exit("input image '{}' not found".format(img_name))
 
-    new_im = im.copy()
+    new_im = im.copy() #look like new layer like in photoshop
     remove_rec(new_im, y1, y2, alpha)
     stitched_im = stitch_imgs(im, new_im)
 
