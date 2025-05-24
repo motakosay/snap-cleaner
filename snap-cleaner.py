@@ -5,12 +5,14 @@ import argparse
 import os.path
 import sys
 
+"""
 def remove_rec(im, y1, y2, alpha):
     pixels = im.load() #is used to access the pixel data of an image that has already been opened.
     for i in range(im.size[0]): #You are iterating over every horizontal position (column) in the image. This allows you to access or process every pixel along each row at that horizontal position.
         for j in range(y1, y2+1): #default values  685 753 
             new_color = tuple([int(v/(1-alpha)) for v in pixels[i,j]])
             pixels[i,j]=new_color
+"""
 
 def draw_rec(im, y1, y2):
     rec = Image.new('RGBA', im.size, (255,255,255,0))
@@ -101,7 +103,7 @@ def main():
         sys.exit("input image '{}' not found".format(img_name))
 
     new_im = im.copy() #look like new layer like in photoshop
-    remove_rec(new_im, y1, y2, alpha) # I guess there is no change!
+    #remove_rec(new_im, y1, y2, alpha) # I guess there is no change! HERE
     stitched_im = stitch_imgs(im, new_im)
 
     print("Saving stitched before/after pic to " + out_name)
