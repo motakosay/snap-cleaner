@@ -84,6 +84,8 @@ def get_args():
 def main():
     args=get_args()
 
+    # arguments 685 753 -i /content/snap-cleaner/test_images/snap_test.jpg -o cleaned_snap.jpg
+
     img_name=args.img
     out_name=args.out
     y1, y2 = args.y1, args.y2
