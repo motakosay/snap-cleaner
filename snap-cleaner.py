@@ -6,7 +6,7 @@ import os.path
 import sys
 
 def remove_rec(im, y1, y2, alpha):
-    pixels = im.load()
+    pixels = im.load() #is used to access the pixel data of an image that has already been opened.
     for i in range(im.size[0]):
         for j in range(y1, y2+1):
             new_color = tuple([int(v/(1-alpha)) for v in pixels[i,j]])
