@@ -85,7 +85,8 @@ def get_args():
     )
 
     return parser.parse_args()
-"""
+
+
 def main():
     args=get_args()
 
@@ -115,8 +116,10 @@ def main():
 
     if show_img:
         stitched_im.show()
+
+
 """
-def main():
+def main_draw_rec():
     args = get_args()
 
     img_name = args.img
@@ -138,6 +141,8 @@ def main():
 
     if show_img:
         im_with_rec.show()
+
+"""
 
 def snap_test():
     im = Image.open("snap_test.jpg").convert('RGBA')
