@@ -133,6 +133,7 @@ def main():
     # Draw rectangle
     im_with_rec = draw_rec(im, y1, y2)
     print("Saving image with drawn rectangle to " + out_name)
+    im_with_rec = im_with_rec.convert("RGB")
     im_with_rec.save(out_name)
 
     if show_img:
