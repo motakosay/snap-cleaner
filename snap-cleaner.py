@@ -126,7 +126,7 @@ def main():
         sys.exit("File {} does not exist".format(img_name))
     print("Fixing " + img_name)
 
-    im = Image.open(img_name).convert('RGBA')
+    im = Image.open(img_name).convert('RGB')
     # Draw rectangle
     im_with_rec = draw_rec(im, y1, y2)
     print("Saving image with drawn rectangle to " + out_name)
