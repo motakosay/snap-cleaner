@@ -82,7 +82,7 @@ def get_args():
     )
 
     return parser.parse_args()
-
+"""
 def main():
     args=get_args()
 
@@ -112,6 +112,28 @@ def main():
 
     if show_img:
         stitched_im.show()
+"""
+def main():
+    args = get_args()
+
+    img_name = args.img
+    out_name = args.out
+    y1, y2 = args.y1, args.y2
+    alpha = args.alpha
+    show_img = args.show
+
+    if not os.path.isfile(img_name):
+        sys.exit("File {} does not exist".format(img_name))
+    print("Fixing " + img_name)
+
+    im = Image.open(img_name).convert('RGBA')
+    # Draw rectangle
+    im_with_rec = draw_rec(im, y1, y2)
+    print("Saving image with drawn rectangle to " + out_name)
+    im_with_rec.save(out_name)
+
+    if show_img:
+        im_with_rec.show()
 
 def snap_test():
     im = Image.open("snap_test.jpg").convert('RGBA')
@@ -119,5 +141,6 @@ def snap_test():
     y1, y2 = 690, 750
 
     draw_rec(im, y1, y2).show()
+
 
 main()
