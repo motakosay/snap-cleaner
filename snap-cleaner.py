@@ -22,6 +22,9 @@ def draw_rec(im, y1, y2):
 
     draw.rectangle(rec_loc, fill=(0,0,0,128))
 
+    im = im.convert("RGBA")
+    rec = rec.convert("RGBA")
+
     return Image.alpha_composite(im, rec)
 
 def stitch_imgs(*images):
