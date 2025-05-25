@@ -103,7 +103,7 @@ def main():
         sys.exit("input image '{}' not found".format(img_name))
 
     new_im = im.copy() #look like new layer like in photoshop
-    remove_rec(new_im, y1, y2, alpha) # I guess there is no change! HERE
+    remove_rec(new_im, y1, y2, alpha) # made changes on new_im!
     stitched_im = stitch_imgs(im, new_im)
 
     print("Saving stitched before/after pic to " + out_name)
