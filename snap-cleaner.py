@@ -104,7 +104,8 @@ def main():
 
     new_im = im.copy() #look like new layer like in photoshop
     remove_rec(new_im, y1, y2, alpha) # made changes on new_im!
-    stitched_im = stitch_imgs(im, new_im) #if we pass only new_im it 'll show only new one!
+    #stitched_im = stitch_imgs(im, new_im) #if we pass only new_im it 'll show only new one!
+    stitched_im = stitch_imgs(new_im)
 
     print("Saving stitched before/after pic to " + out_name)
     stitched_im.save(out_name)
