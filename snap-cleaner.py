@@ -1,4 +1,4 @@
-#this code use alpha blending
+#this code use alpha blending not color overlay?
 from PIL import Image
 from PIL import ImageDraw
 from sys import argv
