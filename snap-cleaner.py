@@ -1,4 +1,5 @@
 #this code use alpha blending not color overlay?
+#you can manipulate value of alpha until get remove rec
 from PIL import Image
 from PIL import ImageDraw
 from sys import argv
