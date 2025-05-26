@@ -1,3 +1,4 @@
+#this code use alpha blending
 from PIL import Image
 from PIL import ImageDraw
 from sys import argv
